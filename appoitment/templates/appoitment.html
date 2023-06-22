@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
+<!-- jQuery -->
 
 {% block body %}
 
@@ -35,49 +36,25 @@
                         <form method='POST'>
                             {% csrf_token %}
                             <div class="row g-3">
-                                <div class="col-12 col-sm-6">
-                                    {% comment %} <select class="form-select bg-light border-0" style="height: 55px;">
-                                        <option selected>Select A Service</option>
-                                        <option value="1">Service 1</option>
-                                        <option value="2">Service 2</option>
-                                        <option value="3">Service 3</option>
-                                    </select> {% endcomment %}
+                                <div class="col-12 col-sm-12 d-flex">                                   
                                     {{form.server}}
                                 </div>
-                                <div class="col-12 col-sm-6">
-                                    {% comment %} <select class="form-select bg-light border-0" style="height: 55px;">
-                                        <option selected>Select Doctor</option>
-                                        <option value="1">Doctor 1</option>
-                                        <option value="2">Doctor 2</option>
-                                        <option value="3">Doctor 3</option>
-                                    </select> {% endcomment %}
+                                <div class="col-12 col-sm-12">
                                     {{form.doctor}}
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    {% comment %} <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;" > {% endcomment %}
                                     {{form.name}}
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    {% comment %} <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;"> {% endcomment %}
                                     {{form.email}}
                                 </div>
                                 <div class="col-12 col-sm-6">
+                                    
                                     {{form.appoitment_data}}
-                                    {% comment %} <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text"
-                                            class="form-control bg-light border-0 datetimepicker-input"
-                                            placeholder="Appointment Date" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;">
-                                    </div> {% endcomment %}
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     {{form.appoitment_time}}
-                                    {% comment %} <div class="time" id="time1" data-target-input="nearest">
-                                        <input type="text"
-                                            class="form-control bg-light border-0 datetimepicker-input"
-                                            placeholder="Appointment Time" data-target="#time1" data-toggle="datetimepicker" style="height: 55px;">
-                                    </div> {% endcomment %}
                                 </div>
-
                                 <div class="col-12">
                                     <button class="btn btn-dark w-100 py-3" type="submit">Make Appointment</button>
                                 </div>

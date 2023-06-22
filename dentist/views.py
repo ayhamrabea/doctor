@@ -4,7 +4,7 @@ from .models import doctor
 # Create your views here.
 
 
-class services(ListView):
+class mydoctor(ListView):
     model = doctor
     context_object_name = 'doctors'
     template_name='our_doctors.html'
